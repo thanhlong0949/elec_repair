@@ -22,29 +22,41 @@ class InfoRepair extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 CircleAvatar(
-                  backgroundImage: AssetImage('assets/avatar.png'),
+                  backgroundColor: Colors.blue.shade100,
                   radius: 40.0,
+                  child: CircleAvatar(
+                    backgroundImage: AssetImage('assets/thewitcher.png'),
+                    radius: 37.0,
+                  ),
                 ),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(15, 0, 0, 0),
+                    padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Nguyễn Văn B',
+                          'Nguyễn Văn Quýt',
                           style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white),
                         ),
                         SizedBox(
-                          height: 10.0,
+                          height: 5.0,
+                        ),
+                        Text(
+                          'Thợ sửa chữa',
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w300,
+                              color: Colors.white),
+                        ),
+                        SizedBox(
+                          height: 0.0,
                         ),
                         Row(
                           children: [
-                            Text(
-                              'Đánh giá:',
-                              style: TextStyle(fontSize: 18),
-                            ),
                             Row(
                               children: generateIcon(5),
                             ),
@@ -55,8 +67,9 @@ class InfoRepair extends StatelessWidget {
                   ),
                 ),
                 Icon(
-                  Icons.notifications,
-                  size: 30.0,
+                  Icons.notifications_on_outlined,
+                  size: 25.0,
+                  color: Colors.white,
                 ),
               ],
             )
@@ -71,8 +84,9 @@ class InfoRepair extends StatelessWidget {
 
     for (var i = 0; i < num; i++) {
       Icon icon = Icon(
-        Icons.star_rate,
+        Icons.star_rate_rounded,
         color: Colors.yellow,
+        size: 18,
       );
 
       icons.add(icon);
